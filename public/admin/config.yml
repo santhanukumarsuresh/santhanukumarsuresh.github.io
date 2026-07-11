@@ -2,8 +2,6 @@ backend:
   name: github
   repo: santhanukumarsuresh/santhanukumarsuresh.github.io
   branch: main
-  auth_type: pkce
-  app_id: Ov23lilgh8KWltK0ahOb
 
 site_url: https://santhanukumarsuresh.github.io
 display_url: https://santhanukumarsuresh.github.io
