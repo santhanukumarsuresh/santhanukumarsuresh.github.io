@@ -2,6 +2,7 @@ backend:
   name: github
   repo: santhanukumarsuresh/santhanukumarsuresh.github.io
   branch: main
+  base_url: https://sveltia-cms-auth.santhanukumarsuresh.workers.dev
 
 site_url: https://santhanukumarsuresh.github.io
 display_url: https://santhanukumarsuresh.github.io
