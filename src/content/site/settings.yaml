@@ -1,0 +1,34 @@
+settings:
+  name: "Santhanu Kumar S"
+  title: "Software Analyst | Enterprise React Developer | Azure GenAI Integration"
+  eyebrow: "Available for remote & freelance work"
+  heroIntro: >-
+    10+ years building enterprise web applications, secure digital platforms, and
+    GenAI-powered features (Azure OpenAI, RAG) across LMS, document-management,
+    certificate-verification, and analytics domains. I also build fast, SEO-ready
+    websites, blogs, and portfolios for individuals and small businesses.
+  aboutParagraphs:
+    - >-
+      I started my professional journey in August 2016 after completing my
+      Bachelor's degree in Computer Science and Engineering, and over the years
+      I've built strong expertise in frontend development, enterprise platforms,
+      solution design, Azure-based applications, and AI-enabled business solutions.
+      My core strength lies in developing secure, scalable, and user-focused web
+      applications using JavaScript, React.js, modern UI frameworks, API
+      integrations, and cloud-based services.
+    - >-
+      I have a strong interest in Research and Development — exploring new
+      technologies, solving complex problems, and converting ideas into practical,
+      production-ready solutions. One of the key milestones in my career was my
+      full-scale involvement in ITSUMO WEB, working with my team from development
+      and R&D through to its successful launch in October 2023, and continuing to
+      enhance it with document search, AI-based summarisation, and a RAG-based
+      chatbot using Azure OpenAI and Azure AI Search.
+    - >-
+      Beyond development, I bring experience in requirement analysis, solution
+      planning, stakeholder collaboration, UAT support, release readiness,
+      production support, internal demos, and knowledge-sharing sessions.
+  email: "santhanukumarsuresh@gmail.com"
+  github: "https://github.com/santhanukumarsuresh"
+  portfolioUrl: "https://santhanukumarsuresh.github.io/"
+  availability: "Open to immediate start · Remote-first preferred · US timezone flexibility"

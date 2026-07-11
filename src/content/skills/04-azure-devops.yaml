@@ -1,0 +1,9 @@
+title: "Azure & DevOps"
+order: 4
+items:
+  - "Azure Static Web Apps"
+  - "Azure Functions"
+  - "Azure Storage (Blob/Table)"
+  - "Azure DevOps"
+  - "CI/CD"
+  - "Release Management"

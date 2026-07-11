@@ -1,0 +1,14 @@
+title: "Frontend & Integration"
+order: 1
+items:
+  - "React.js"
+  - "TypeScript"
+  - "JavaScript"
+  - "HTML5"
+  - "CSS3"
+  - "Astro"
+  - "TanStack Query/Router/Start"
+  - "Tailwind CSS"
+  - "DaisyUI"
+  - "MUI"
+  - "REST API Integration"

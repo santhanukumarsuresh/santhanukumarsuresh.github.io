@@ -1,0 +1,9 @@
+title: "Cloud & GenAI"
+order: 3
+items:
+  - "Azure OpenAI"
+  - "Azure AI Search"
+  - "RAG Chatbots"
+  - "Sentiment Analysis"
+  - "AI Evaluation Systems"
+  - "Microsoft 365 Copilot"

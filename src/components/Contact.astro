@@ -1,0 +1,27 @@
+---
+interface Props {
+  email: string;
+  githubUrl: string;
+  availability: string;
+}
+
+const { email, githubUrl, availability } = Astro.props;
+const githubHandle = `@${githubUrl.replace(/\/$/, '').split('/').pop()}`;
+---
+
+<section id="contact" class="alt-bg contact-section">
+  <div class="container">
+    <h2>Let's Work Together</h2>
+    <p class="section-intro contact-intro">
+      Open to enterprise React engagements, remote/contract roles, and freelance projects —
+      including personal websites, blogs, and portfolios.
+    </p>
+    <div class="cta-group contact-cta">
+      <a class="btn btn-primary" href={`mailto:${email}`}>{email}</a>
+      <a class="btn btn-outline" href={githubUrl} target="_blank" rel="noopener noreferrer">
+        {githubHandle}
+      </a>
+    </div>
+    <p class="section-intro contact-availability">{availability}</p>
+  </div>
+</section>

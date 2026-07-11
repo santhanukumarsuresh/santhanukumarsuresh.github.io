@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://santhanukumarsuresh.github.io/sitemap.xml

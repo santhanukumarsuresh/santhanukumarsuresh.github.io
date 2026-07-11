@@ -1,0 +1,100 @@
+backend:
+  name: github
+  repo: santhanukumarsuresh/santhanukumarsuresh.github.io
+  branch: main
+  auth_type: pkce
+  app_id: REPLACE_WITH_YOUR_GITHUB_OAUTH_APP_CLIENT_ID
+
+site_url: https://santhanukumarsuresh.github.io
+display_url: https://santhanukumarsuresh.github.io
+logo_url: /favicon.svg
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Settings"
+    editor:
+      preview: false
+    files:
+      - file: "src/content/site/settings.yaml"
+        label: "Main Settings"
+        name: "settings"
+        fields:
+          - { label: "Full Name", name: "name", widget: "string" }
+          - { label: "Title / Tagline", name: "title", widget: "string" }
+          - { label: "Eyebrow Text", name: "eyebrow", widget: "string" }
+          - { label: "Hero Intro", name: "heroIntro", widget: "text" }
+          - label: "About Paragraphs"
+            name: "aboutParagraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "GitHub URL", name: "github", widget: "string" }
+          - { label: "Portfolio URL", name: "portfolioUrl", widget: "string" }
+          - { label: "Availability", name: "availability", widget: "string" }
+
+  - name: "skills"
+    label: "Skills"
+    folder: "src/content/skills"
+    create: true
+    slug: "{{fields.order}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Category Title", name: "title", widget: "string" }
+      - { label: "Items", name: "items", widget: "list" }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
+
+  - name: "experience"
+    label: "Experience"
+    folder: "src/content/experience"
+    create: true
+    slug: "{{fields.order}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Organization", name: "org", widget: "string" }
+      - { label: "Period", name: "period", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{fields.order}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Impact Tag", name: "impactTag", widget: "string", required: false }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
+
+  - name: "certifications"
+    label: "Certifications"
+    folder: "src/content/certifications"
+    create: true
+    slug: "{{fields.order}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Level", name: "level", widget: "string" }
+      - { label: "Certificate URL", name: "url", widget: "string" }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
+
+  - name: "stats"
+    label: "Impact Stats"
+    folder: "src/content/stats"
+    create: true
+    slug: "{{fields.order}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Number", name: "number", widget: "string" }
+      - { label: "Label", name: "label", widget: "string" }
+      - { label: "Order", name: "order", widget: "number", default: 0 }

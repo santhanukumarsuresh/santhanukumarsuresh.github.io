@@ -1,0 +1,31 @@
+---
+interface ExperienceItem {
+  role: string;
+  org: string;
+  period: string;
+  description: string;
+}
+
+interface Props {
+  items: ExperienceItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<section id="experience">
+  <div class="container">
+    <h2>Career Path</h2>
+    <p class="section-intro">10+ years, four companies, one consistent focus: enterprise web delivery.</p>
+    <div class="timeline">
+      {items.map((item) => (
+        <div class="timeline-item">
+          <div class="role">{item.role}</div>
+          <div class="org">{item.org}</div>
+          <div class="period">{item.period}</div>
+          <p>{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

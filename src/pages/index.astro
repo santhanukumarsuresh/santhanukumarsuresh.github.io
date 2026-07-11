@@ -1,0 +1,64 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Skills from '../components/Skills.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Certifications from '../components/Certifications.astro';
+import Contact from '../components/Contact.astro';
+
+const siteEntry = await getEntry('site', 'settings');
+const site = siteEntry!.data;
+
+const skillGroups = (await getCollection('skills'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((entry) => entry.data);
+
+const experienceItems = (await getCollection('experience'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((entry) => entry.data);
+
+const projectItems = (await getCollection('projects'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((entry) => entry.data);
+
+const certItems = (await getCollection('certifications'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((entry) => entry.data);
+
+const statItems = (await getCollection('stats'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((entry) => entry.data);
+---
+
+<BaseLayout
+  title={`${site.name} | Software Analyst & Enterprise React Developer`}
+  description={site.heroIntro}
+  name={site.name}
+  githubUrl={site.github}
+  email={site.email}
+>
+  <Header />
+  <main id="main">
+    <Hero
+      eyebrow={site.eyebrow}
+      name={site.name}
+      title={site.title}
+      intro={site.heroIntro}
+      email={site.email}
+      githubUrl={site.github}
+      certifications={certItems}
+    />
+    <About paragraphs={site.aboutParagraphs} />
+    <Skills groups={skillGroups} />
+    <Experience items={experienceItems} />
+    <Projects projects={projectItems} stats={statItems} />
+    <Certifications certifications={certItems} />
+    <Contact email={site.email} githubUrl={site.github} availability={site.availability} />
+  </main>
+  <Footer name={site.name} />
+</BaseLayout>

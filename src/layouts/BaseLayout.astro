@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  name: string;
+  githubUrl: string;
+  email: string;
+}
+
+const { title, description, name, githubUrl, email } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name,
+  jobTitle: 'Software Analyst',
+  description,
+  url: Astro.site?.toString(),
+  email: `mailto:${email}`,
+  worksFor: {
+    '@type': 'Organization',
+    name: 'MOL Information Technology India Pvt. Ltd.',
+  },
+  sameAs: [githubUrl],
+  knowsAbout: [
+    'React.js',
+    'TypeScript',
+    'JavaScript',
+    'Azure OpenAI',
+    'Azure AI Search',
+    'RAG',
+    'Astro',
+    '.NET',
+    'Enterprise Web Applications',
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={name} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={`${name} Portfolio`} />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,48 @@
+---
+interface Cert {
+  name: string;
+  level: string;
+  url: string;
+}
+
+interface Props {
+  eyebrow: string;
+  name: string;
+  title: string;
+  intro: string;
+  email: string;
+  githubUrl: string;
+  certifications: Cert[];
+}
+
+const { eyebrow, name, title, intro, email, githubUrl, certifications } = Astro.props;
+---
+
+<section class="hero" id="top">
+  <div class="container">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{name}</h1>
+    <p class="subtitle">{title}</p>
+    <p class="intro">{intro}</p>
+    <div class="cta-group">
+      <a class="btn btn-primary" href={`mailto:${email}`}>Email Me</a>
+      <a class="btn btn-outline" href={githubUrl} target="_blank" rel="noopener noreferrer">
+        GitHub Profile
+      </a>
+    </div>
+    <div class="cert-row">
+      {certifications.map((cert) => (
+        <a
+          class="cert-badge"
+          href={cert.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${cert.name} ${cert.level} — view certificate`}
+        >
+          <span class="cert-badge-label">{cert.name}</span>
+          <span class="cert-badge-level">{cert.level}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
