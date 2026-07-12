@@ -2,6 +2,6 @@ title: "ITSUMO Document Platform"
 order: 2
 impactTag: "~50% faster retrieval"
 description: >-
-  Full-scale involvement from development and R&D through launch
-  (Oct 2023). Azure OpenAI + Azure AI Search RAG chatbot and document
-  summarisation for faster contextual access.
+  Added a RAG chatbot on Azure OpenAI + Azure AI Search for
+  document-grounded Q&A, plus AI summarisation for large documents —
+  cutting document access time by roughly 50% for MOL group users.

@@ -19,11 +19,10 @@ settings:
     - >-
       I have a strong interest in Research and Development — exploring new
       technologies, solving complex problems, and converting ideas into practical,
-      production-ready solutions. One of the key milestones in my career was my
-      full-scale involvement in ITSUMO WEB, working with my team from development
-      and R&D through to its successful launch in October 2023, and continuing to
-      enhance it with document search, AI-based summarisation, and a RAG-based
-      chatbot using Azure OpenAI and Azure AI Search.
+      production-ready solutions. That mindset is what pulled me deep into GenAI:
+      taking features from early proof-of-concept through stakeholder buy-in to
+      production, and building reusable AI patterns that other teams could pick up
+      afterward rather than one-off scripts.
     - >-
       Beyond development, I bring experience in requirement analysis, solution
       planning, stakeholder collaboration, UAT support, release readiness,

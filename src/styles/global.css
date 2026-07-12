@@ -379,9 +379,14 @@ h2 {
   margin-bottom: 8px;
 }
 
-.timeline-item p {
+.timeline-item .highlight-list {
   color: var(--text-dim);
   font-size: 0.92rem;
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 /* Projects */
