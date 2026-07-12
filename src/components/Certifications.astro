@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import type { ImageMetadata } from 'astro:content';
+import type { ImageMetadata } from 'astro';
 
 interface Cert {
   name: string;
@@ -21,19 +21,6 @@ const { certifications } = Astro.props;
   <div class="container">
     <h2>Certifications</h2>
     <p class="section-intro">Verified React proficiency from Certificates.dev.</p>
-    <div class="cert-row">
-      {certifications.map((cert) => (
-        <a
-          class="cert-badge"
-          href={cert.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`${cert.name} ${cert.level} — view certificate`}
-        >
-          <img src={cert.badgeUrl} alt={`${cert.name} ${cert.level}`} loading="lazy" />
-        </a>
-      ))}
-    </div>
 
     {certifications.some((cert) => cert.certificateImage) && (
       <div class="grid cert-showcase">
