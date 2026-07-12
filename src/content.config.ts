@@ -65,6 +65,7 @@ const stats = defineCollection({
   schema: z.object({
     number: z.string(),
     label: z.string(),
+    context: z.string().optional(),
     order: z.number().default(0),
   }),
 });

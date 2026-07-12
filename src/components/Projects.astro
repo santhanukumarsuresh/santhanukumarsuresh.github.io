@@ -8,6 +8,7 @@ interface ProjectItem {
 interface StatItem {
   number: string;
   label: string;
+  context?: string;
 }
 
 interface Props {
@@ -37,6 +38,7 @@ const { projects, stats } = Astro.props;
         <div class="card stat-card">
           <div class="num">{stat.number}</div>
           <div class="label">{stat.label}</div>
+          {stat.context && <div class="stat-context">{stat.context}</div>}
         </div>
       ))}
     </div>
