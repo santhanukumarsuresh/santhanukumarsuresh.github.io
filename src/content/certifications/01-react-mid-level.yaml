@@ -3,3 +3,4 @@ level: "Mid-Level"
 order: 1
 url: "https://certificates.dev/react/certificates/a23b5953-eda8-472a-9476-e1ac213ae8e2"
 badgeUrl: "https://img.shields.io/badge/React_Certified-Mid--Level-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=1A365D"
+certificateImage: "./images/react-mid-level.jpeg"

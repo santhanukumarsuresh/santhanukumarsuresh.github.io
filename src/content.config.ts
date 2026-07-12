@@ -49,13 +49,15 @@ const projects = defineCollection({
 
 const certifications = defineCollection({
   loader: glob({ pattern: '**/*.yaml', base: 'src/content/certifications' }),
-  schema: z.object({
-    name: z.string(),
-    level: z.string(),
-    url: z.string().url(),
-    badgeUrl: z.string().url(),
-    order: z.number().default(0),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      level: z.string(),
+      url: z.string().url(),
+      badgeUrl: z.string().url(),
+      certificateImage: image().optional(),
+      order: z.number().default(0),
+    }),
 });
 
 const stats = defineCollection({

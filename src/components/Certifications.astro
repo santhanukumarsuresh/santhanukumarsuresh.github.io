@@ -1,9 +1,13 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro:content';
+
 interface Cert {
   name: string;
   level: string;
   url: string;
   badgeUrl: string;
+  certificateImage?: ImageMetadata;
 }
 
 interface Props {
@@ -30,5 +34,28 @@ const { certifications } = Astro.props;
         </a>
       ))}
     </div>
+
+    {certifications.some((cert) => cert.certificateImage) && (
+      <div class="grid cert-showcase">
+        {certifications.map((cert) => cert.certificateImage && (
+          <a
+            class="cert-card"
+            href={cert.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${cert.name} ${cert.level} — open verification page`}
+          >
+            <Image
+              src={cert.certificateImage}
+              alt={`Certificate of Competence: Certified ${cert.level} React Developer, awarded to Santhanu Kumar S`}
+              width={640}
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="cert-card-caption">{cert.name} — {cert.level} · view verification</span>
+          </a>
+        ))}
+      </div>
+    )}
   </div>
 </section>
