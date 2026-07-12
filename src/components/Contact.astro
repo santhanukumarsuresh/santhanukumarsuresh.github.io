@@ -2,10 +2,11 @@
 interface Props {
   email: string;
   githubUrl: string;
+  linkedinUrl: string;
   availability: string;
 }
 
-const { email, githubUrl, availability } = Astro.props;
+const { email, githubUrl, linkedinUrl, availability } = Astro.props;
 const githubHandle = `@${githubUrl.replace(/\/$/, '').split('/').pop()}`;
 ---
 
@@ -20,6 +21,9 @@ const githubHandle = `@${githubUrl.replace(/\/$/, '').split('/').pop()}`;
       <a class="btn btn-primary" href={`mailto:${email}`}>{email}</a>
       <a class="btn btn-outline" href={githubUrl} target="_blank" rel="noopener noreferrer">
         {githubHandle}
+      </a>
+      <a class="btn btn-outline" href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+        LinkedIn
       </a>
     </div>
     <p class="section-intro contact-availability">{availability}</p>

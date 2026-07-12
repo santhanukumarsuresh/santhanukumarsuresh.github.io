@@ -12,10 +12,11 @@ interface Props {
   intro: string;
   email: string;
   githubUrl: string;
+  linkedinUrl: string;
   certifications: Cert[];
 }
 
-const { eyebrow, name, title, intro, email, githubUrl, certifications } = Astro.props;
+const { eyebrow, name, title, intro, email, githubUrl, linkedinUrl, certifications } = Astro.props;
 ---
 
 <section class="hero" id="top">
@@ -28,6 +29,9 @@ const { eyebrow, name, title, intro, email, githubUrl, certifications } = Astro.
       <a class="btn btn-primary" href={`mailto:${email}`}>Email Me</a>
       <a class="btn btn-outline" href={githubUrl} target="_blank" rel="noopener noreferrer">
         GitHub Profile
+      </a>
+      <a class="btn btn-outline" href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+        LinkedIn Profile
       </a>
     </div>
     <div class="cert-row">
