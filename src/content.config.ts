@@ -11,6 +11,7 @@ const site = defineCollection({
     aboutParagraphs: z.array(z.string()),
     email: z.string(),
     github: z.string().url(),
+    linkedin: z.string().url(),
     portfolioUrl: z.string().url(),
     availability: z.string(),
   }),

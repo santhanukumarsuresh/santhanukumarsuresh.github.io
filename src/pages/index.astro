@@ -40,6 +40,7 @@ const statItems = (await getCollection('stats'))
   description={site.heroIntro}
   name={site.name}
   githubUrl={site.github}
+  linkedinUrl={site.linkedin}
   email={site.email}
 >
   <Header />
@@ -51,6 +52,7 @@ const statItems = (await getCollection('stats'))
       intro={site.heroIntro}
       email={site.email}
       githubUrl={site.github}
+      linkedinUrl={site.linkedin}
       certifications={certItems}
     />
     <About paragraphs={site.aboutParagraphs} />
@@ -58,7 +60,12 @@ const statItems = (await getCollection('stats'))
     <Experience items={experienceItems} />
     <Projects projects={projectItems} stats={statItems} />
     <Certifications certifications={certItems} />
-    <Contact email={site.email} githubUrl={site.github} availability={site.availability} />
+    <Contact
+      email={site.email}
+      githubUrl={site.github}
+      linkedinUrl={site.linkedin}
+      availability={site.availability}
+    />
   </main>
   <Footer name={site.name} />
 </BaseLayout>
