@@ -3,6 +3,7 @@ interface Cert {
   name: string;
   level: string;
   url: string;
+  badgeUrl: string;
 }
 
 interface Props {
@@ -25,8 +26,7 @@ const { certifications } = Astro.props;
           rel="noopener noreferrer"
           aria-label={`${cert.name} ${cert.level} — view certificate`}
         >
-          <span class="cert-badge-label">{cert.name}</span>
-          <span class="cert-badge-level">{cert.level}</span>
+          <img src={cert.badgeUrl} alt={`${cert.name} ${cert.level}`} loading="lazy" />
         </a>
       ))}
     </div>

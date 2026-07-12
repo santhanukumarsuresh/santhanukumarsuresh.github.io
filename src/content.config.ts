@@ -53,6 +53,7 @@ const certifications = defineCollection({
     name: z.string(),
     level: z.string(),
     url: z.string().url(),
+    badgeUrl: z.string().url(),
     order: z.number().default(0),
   }),
 });

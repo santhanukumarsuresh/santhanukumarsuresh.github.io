@@ -268,7 +268,7 @@ h2 {
   color: var(--cyan);
 }
 
-/* Certification badges (no external requests) */
+/* Certification badges */
 .cert-row {
   display: flex;
   gap: 12px;
@@ -279,29 +279,15 @@ h2 {
 .cert-badge {
   display: inline-flex;
   align-items: center;
-  border-radius: 6px;
-  overflow: hidden;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  border: 1px solid var(--border);
 }
 
 .cert-badge:hover {
   text-decoration: none;
 }
 
-.cert-badge .cert-badge-label {
-  background: var(--navy);
-  color: #fff;
-  padding: 8px 12px;
-}
-
-.cert-badge .cert-badge-level {
-  background: var(--cyan);
-  color: var(--navy-dark);
-  padding: 8px 12px;
+.cert-badge img {
+  height: 28px;
+  display: block;
 }
 
 /* Grids and cards */
