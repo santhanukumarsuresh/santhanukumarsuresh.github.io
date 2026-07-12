@@ -1,6 +1,7 @@
 title: "CMS Standardisation"
-order: 4
+order: 3
 impactTag: "~30-40% faster delivery"
 description: >-
-  Reusable CMS templates, layouts, and SEO-enabled implementation practices
-  for faster, consistent MOL group website delivery.
+  Defined a template-driven CMS pattern for MOL group homepages —
+  reusable layouts, SEO-ready markup, and AI-assisted design-to-component
+  conversion — cutting build effort by 30–40% and repetitive QA cycles.

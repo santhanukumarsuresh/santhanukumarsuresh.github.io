@@ -32,7 +32,7 @@ const experience = defineCollection({
     role: z.string(),
     org: z.string(),
     period: z.string(),
-    description: z.string(),
+    highlights: z.array(z.string()),
     order: z.number().default(0),
   }),
 });

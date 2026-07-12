@@ -2,6 +2,6 @@ title: "iKnowNow LMS"
 order: 1
 impactTag: "~70% less manual effort"
 description: >-
-  AI-powered feedback sentiment analytics and automated descriptive-answer
-  evaluation using Azure OpenAI to improve learning insights and assessment
-  consistency.
+  Built a sentiment-analysis dashboard on learner feedback and an Azure
+  OpenAI-based grader for descriptive answers, cutting manual assessment
+  effort by roughly 70% while keeping scoring consistent and unbiased.

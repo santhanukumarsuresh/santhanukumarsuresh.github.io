@@ -2,7 +2,10 @@ role: "Software Analyst"
 org: "MOL Information Technology India Pvt. Ltd."
 period: "Apr 2024 – Present"
 order: 1
-description: >-
-  Delivering iKnowNow LMS, ITSUMO Document Platform, MOL Connect, and
-  CMS-standardised homepages for MOL group companies, with GenAI features
-  (RAG, Azure OpenAI evaluation, sentiment analytics).
+highlights:
+  - "Lead AI/GenAI initiatives across iKnowNow and ITSUMO end to end — R&D, proof of concept, stakeholder alignment, and feasibility analysis through to production, establishing reusable AI patterns for other teams to adopt."
+  - "Defined a template-driven CMS approach adopted across MOL group homepages, plus AI-assisted design-to-component conversion to speed up build-out."
+  - "Independently owned and delivered a certificate generation and QR-based verification system end to end within a short timeframe."
+  - "Use Microsoft 365 Copilot for requirement analysis and solution planning, and support other MOL group platforms — including MOL Connect — as part of day-to-day delivery."
+  - "Run internal demos and knowledge-sharing sessions on AI adoption, Copilot, and CMS practices; collaborate with QA, infrastructure, security, and business stakeholders to keep releases audit-aligned and low-defect."
+  - "Awarded Employee of the Quarter (Jul 2024, Jul 2025) and multiple Spot Awards for delivery speed and project impact."

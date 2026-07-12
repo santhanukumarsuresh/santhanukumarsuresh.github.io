@@ -3,7 +3,7 @@ interface ExperienceItem {
   role: string;
   org: string;
   period: string;
-  description: string;
+  highlights: string[];
 }
 
 interface Props {
@@ -23,7 +23,11 @@ const { items } = Astro.props;
           <div class="role">{item.role}</div>
           <div class="org">{item.org}</div>
           <div class="period">{item.period}</div>
-          <p>{item.description}</p>
+          <ul class="highlight-list">
+            {item.highlights.map((highlight) => (
+              <li>{highlight}</li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>

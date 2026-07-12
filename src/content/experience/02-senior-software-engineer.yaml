@@ -2,6 +2,8 @@ role: "Senior Software Engineer"
 org: "MOL Information Technology India Pvt. Ltd."
 period: "Sep 2021 – Dec 2023"
 order: 2
-description: >-
-  Full-scale involvement in ITSUMO WEB from development and R&D through to
-  its successful launch in October 2023.
+highlights:
+  - "Full-scale involvement in ITSUMO, MOL's centralised document platform for group companies and maritime operations, from early R&D through its successful launch in October 2023."
+  - "Contributed business-critical workflows, APIs, dashboards, and reusable UI components to the iKnowNow LMS platform, improving usability and data visibility."
+  - "Integrated React-based UI components into an existing .NET application architecture, moving the platform toward a scalable, modern front end without a full rewrite."
+  - "Helped stand up the first template-driven CMS homepages for MOL group companies, laying the groundwork for later standardisation."
